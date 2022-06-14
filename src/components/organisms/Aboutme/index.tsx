@@ -27,7 +27,10 @@ const StyledAboutmeTitle = styled.h3`
   font-size: 24px;
   line-height: 26px;
   letter-spacing: 0.04em;
-  color: blue;
+  color: #bdebea;
+  @media (max-width: 1150px) {
+    text-align: center;
+  }
 `;
 
 const StyledAboutmeDescriptionContainer = styled.div`
@@ -42,17 +45,9 @@ const StyledAboutmeDescription = styled.p`
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0.04em;
-  color: blue;
-  :after {
-    display: inline-block;
-    position: absolute;
-    width: 60px;
-    height: 5px;
-    left: 360px;
-    background: black;
-    border-radius: 2px;
-    transform: rotate(-90deg);
-    z-index: 2;
+  color: #bdebea;
+  @media (max-width: 1150px) {
+    text-align: center;
   }
 `;
 
