@@ -6,6 +6,7 @@ import typescript from "../../../assets/images/typescripticon.svg";
 import react from "../../../assets/images/reactjsicon.svg";
 import git from "../../../assets/images/giticon.svg";
 import sass from "../../../assets/images/sass.png";
+import graphql from "../../../assets/images/graphqlicon.svg";
 import firebase from "../../../assets/images/firebaseicon.svg";
 import docker from "../../../assets/images/dockericon.svg";
 import styledcomponent from "../../../assets/images/styledcomponents.svg";
@@ -18,6 +19,7 @@ interface SkillsTypes {
     | "REACT"
     | "GIT"
     | "SASS"
+    | "GRAPHQL"
     | "FIREBASE"
     | "DOCKER"
     | "STYLED \n COMPONENTS";
@@ -45,6 +47,10 @@ const skills: SkillsTypes[] = [
     title: "SASS"
   },
   {
+    image: graphql,
+    title: "GRAPHQL"
+  },
+  {
     image: firebase,
     title: "FIREBASE"
   },
@@ -61,6 +67,7 @@ const skills: SkillsTypes[] = [
 const StyledSkills = styled.section`
   margin-top: 130px;
   margin-bottom: 28px;
+  width: 60%;
 `;
 
 const StyledSkillsTitle = styled.div`
@@ -70,13 +77,22 @@ const StyledSkillsTitle = styled.div`
   font-size: 24px;
   line-height: 26px;
   letter-spacing: 0.04em;
-  color: c.$blue70;
+  margin-bottom: 40px;
+  color: #bdebea;
+  @media (max-width: 1150px) {
+    text-align: center;
+  }
 `;
 
 const StyledSkillsContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+  grid-gap: 0.6em;
+  justify-items: center;
+  align-items: center;
+  @media (max-width: 1150px) {
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+  }
 `;
 
 export default function Skills() {
@@ -84,12 +100,7 @@ export default function Skills() {
     <StyledSkills>
       <StyledSkillsTitle>Skills</StyledSkillsTitle>
       <StyledSkillsContainer>
-        {skills.slice(0, 4).map(({ image, title }) => (
-          <Skill image={image} title={title} description={title} />
-        ))}
-      </StyledSkillsContainer>
-      <StyledSkillsContainer>
-        {skills.slice(4).map(({ image, title }) => (
+        {skills.map(({ image, title }) => (
           <Skill image={image} title={title} description={title} />
         ))}
       </StyledSkillsContainer>
