@@ -1,10 +1,16 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 interface Props {
   text: string;
-  // sizes?: "small" | "medium" | "large";
 }
+
+const pulse = keyframes`
+  0% {
+    box-shadow: 0 0 25px #5ddcff;
+                0 0 50px #4e00c2;
+  }
+`;
 
 const StyledButton = styled.button`
   font-family: "Montserrat";
@@ -12,17 +18,16 @@ const StyledButton = styled.button`
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  color: c.$black40;
+  color: #252728;
+  cursor: pointer;
   padding: 12px 20px 13px;
-  background: c.$linear10;
+  background: linear-gradient(90deg, #00f5a0 0%, #00d9f5 100%);
   border-radius: 6px;
+  :hover {
+    animation: ${pulse} 1.7s ease-in-out;
+  }
 `;
 
 export default function Button({ text }: Props) {
   return <StyledButton type="button">{text}</StyledButton>;
 }
-
-/* Button.defaultProps = {
-  sizes: "medium"
-};
- */
