@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Button from "../../atoms/Button";
 
 const StyledHeader = styled.header`
-  background-color: c.$black50;
+  background-color: #041f31;
   position: fixed;
   width: 100%;
   height: 100px;
@@ -42,14 +42,14 @@ const StyledHeaderRightSide = styled.div`
   }
 `;
 
-export default function Skill() {
+export default function Header() {
   return (
     <StyledHeader>
       <StyledHeaderLeftSide>
-        <StyledHeaderButton />
+        <StyledHeaderButton>Home</StyledHeaderButton>
       </StyledHeaderLeftSide>
       <StyledHeaderRightSide>
-        <StyledHeaderButton />
+        <StyledHeaderButton>Projects</StyledHeaderButton>
         <Button text="About" />
       </StyledHeaderRightSide>
     </StyledHeader>
