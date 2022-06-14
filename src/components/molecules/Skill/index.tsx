@@ -19,6 +19,10 @@ const StyledSkillImage = styled.img`
   display: inline-flex;
   width: 120px;
   height: 120px;
+  @media (max-width: 1150px) {
+    width: 110px;
+    height: 110px;
+  }
 `;
 
 const StyledSkillTitleContainer = styled.div`
@@ -29,11 +33,11 @@ const StyledSkillTitleContainer = styled.div`
 const StyledSkillTitle = styled.h3`
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 26px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
   letter-spacing: 0.04em;
-  color: blue;
+  color: #bdebea;
 `;
 
 export default function Skill({ image, title, description }: Props) {
