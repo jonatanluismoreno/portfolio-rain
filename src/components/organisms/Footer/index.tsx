@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import gmail from "../../../assets/images/gmailicon.svg";
 import github from "../../../assets/images/githubicon.svg";
 import linkedin from "../../../assets/images/linkedinicon.svg";
@@ -18,7 +17,7 @@ const StyledFooterSocialMediaContainer = styled.div`
   gap: 73px;
 `;
 
-const StyledFooterSocialMedia = styled.div`
+const StyledFooterSocialMedia = styled.a`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -79,25 +78,14 @@ export default function Footer() {
           <StyledFooterSocialMediaImage src={gmail} alt="gmail" />
           <StyledFooterSocialMediaTitle>GMAIL</StyledFooterSocialMediaTitle>
         </StyledFooterSocialMedia>
-        <Link
-          to={{
-            pathname: "https://www.linkedin.com/in/jonatan-moreno-39651b215/"
-          }}
-          target="_blank"
-        >
-          <StyledFooterSocialMedia>
-            <StyledFooterSocialMediaImage src={linkedin} alt="linkedin" />
-            <StyledFooterSocialMediaTitle>
-              LINKEDIN
-            </StyledFooterSocialMediaTitle>
-          </StyledFooterSocialMedia>
-        </Link>
-        <Link to="/linkedin" target="_blank">
-          <StyledFooterSocialMedia>
-            <StyledFooterSocialMediaImage src={github} alt="github" />
-            <StyledFooterSocialMediaTitle>GITHUB</StyledFooterSocialMediaTitle>
-          </StyledFooterSocialMedia>
-        </Link>
+        <StyledFooterSocialMedia href="https://www.linkedin.com/in/jonatan-moreno-39651b215/">
+          <StyledFooterSocialMediaImage src={linkedin} alt="linkedin" />
+          <StyledFooterSocialMediaTitle>LINKEDIN</StyledFooterSocialMediaTitle>
+        </StyledFooterSocialMedia>
+        <StyledFooterSocialMedia href="https://github.com/jonatanluismoreno">
+          <StyledFooterSocialMediaImage src={github} alt="github" />
+          <StyledFooterSocialMediaTitle>GITHUB</StyledFooterSocialMediaTitle>
+        </StyledFooterSocialMedia>
       </StyledFooterSocialMediaContainer>
       <StyledFooterLinks>
         <StyledFooterLink>Projects</StyledFooterLink>
