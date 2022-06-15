@@ -13,14 +13,12 @@ function App() {
       <Route path="/projects" element={<ProjectsPage />} />
       <Route
         path="/github"
-        element={() => {
-          var link = document.createElement("a");
-          link.href = "https://github.com/jonatanluismoreno";
-          document.body.appendChild(link);
-
-          link.click();
-          return null;
-        }}
+        element={
+          <Navigate
+            to="https://www.linkedin.com/in/jonatan-moreno-39651b215"
+            replace
+          />
+        }
       />
       <Route
         path="/linkedin"
