@@ -79,7 +79,12 @@ export default function Footer() {
           <StyledFooterSocialMediaImage src={gmail} alt="gmail" />
           <StyledFooterSocialMediaTitle>GMAIL</StyledFooterSocialMediaTitle>
         </StyledFooterSocialMedia>
-        <Link to="https://www.linkedin.com/in/jonatan-moreno-39651b215/">
+        <Link
+          to={{
+            pathname: "https://www.linkedin.com/in/jonatan-moreno-39651b215/"
+          }}
+          target="_blank"
+        >
           <StyledFooterSocialMedia>
             <StyledFooterSocialMediaImage src={linkedin} alt="linkedin" />
             <StyledFooterSocialMediaTitle>
@@ -87,7 +92,7 @@ export default function Footer() {
             </StyledFooterSocialMediaTitle>
           </StyledFooterSocialMedia>
         </Link>
-        <Link to="https://github.com/jonatanluismoreno">
+        <Link to="/linkedin" target="_blank">
           <StyledFooterSocialMedia>
             <StyledFooterSocialMediaImage src={github} alt="github" />
             <StyledFooterSocialMediaTitle>GITHUB</StyledFooterSocialMediaTitle>

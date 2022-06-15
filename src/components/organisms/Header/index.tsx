@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Button from "../../atoms/Button";
 
@@ -46,11 +47,17 @@ export default function Header() {
   return (
     <StyledHeader>
       <StyledHeaderLeftSide>
-        <StyledHeaderButton>Home</StyledHeaderButton>
+        <Link to="/">
+          <StyledHeaderButton>Home</StyledHeaderButton>
+        </Link>
       </StyledHeaderLeftSide>
       <StyledHeaderRightSide>
-        <StyledHeaderButton>Projects</StyledHeaderButton>
-        <Button text="About" />
+        <Link to="/projects">
+          <StyledHeaderButton>Projects</StyledHeaderButton>
+        </Link>
+        <Link to="/about">
+          <Button text="About" />
+        </Link>
       </StyledHeaderRightSide>
     </StyledHeader>
   );
