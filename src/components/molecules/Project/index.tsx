@@ -6,6 +6,8 @@ interface Props {
   listImages: any;
   seconds: number;
   tecnologies: string[];
+  name: string;
+  description: string;
 }
 
 const StyledProject = styled.div`
@@ -73,21 +75,24 @@ const StyledProjectDescription = styled.p`
     text-align: center;
   }
 `;
-export default function Project({ listImages, seconds, tecnologies }: Props) {
+export default function Project({
+  listImages,
+  seconds,
+  tecnologies,
+  name,
+  description
+}: Props) {
   return (
     <StyledProject>
       <Carousel carouselItems={listImages} seconds={seconds} />
       <StyledProjectBotton>
-        <StyledProjectTitle>FRUTTI STOP</StyledProjectTitle>
+        <StyledProjectTitle>{name}</StyledProjectTitle>
         <StyledProjectTechnologies>
           {tecnologies.map((technology: string) => (
             <StyledProjectTechnology>{technology}</StyledProjectTechnology>
           ))}
         </StyledProjectTechnologies>
-        <StyledProjectDescription>
-          A tipical game where you have to complete a list of topics with
-          randoms letters. Its multiplayer and you can play with your friends.
-        </StyledProjectDescription>
+        <StyledProjectDescription>{description}</StyledProjectDescription>
       </StyledProjectBotton>
     </StyledProject>
   );

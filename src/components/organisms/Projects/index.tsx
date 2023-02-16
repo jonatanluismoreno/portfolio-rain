@@ -140,7 +140,8 @@ const kimcheecnologies = [
 const pricingtecnologies = ["JAVASCRIPT", "CSS"];
 
 const StyledProjects = styled.div`
-  width: 100%;
+  margin-top: 200px;
+  width: 85vw;
   /* width: 60% */
   @media (max-width: 1150px) {
     display: flex;
@@ -149,8 +150,8 @@ const StyledProjects = styled.div`
   }
 `;
 const StyledProjectsTitle = styled.div`
-  margin-top: 100px;
-  margin-bottom: 32px;
+  margin-left: 150px;
+  margin-bottom: 50px;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
@@ -185,25 +186,34 @@ export default function Main() {
           listImages={strawberryList}
           seconds={3500}
           tecnologies={strawberryTecnologies}
+          name="FRUTTI STOP"
+          description="A tipical game where you have to complete a list of topics with
+          randoms letters. Its multiplayer and you can play with your friends."
         />
         <Project
           listImages={figmacommunityList}
           seconds={2700}
           tecnologies={figmaTecnologies}
+          name="FIGMA COMMUNITY CLONE"
+          description="A clone of one of the most useful web pages for frontends  and web designers. "
         />
         <Project
           listImages={kimcheList}
           seconds={1800}
           tecnologies={kimcheecnologies}
+          name="COUNTRY FINDER"
+          description="An interactive page where you can search and filter countries by their capital and their languages."
         />
         <Project
           listImages={pricingList}
           seconds={4500}
           tecnologies={pricingtecnologies}
+          name="PRICING ELEMENT"
+          description="A visual element that adapts value as query traffic increases."
         />
       </StyledProjectsContainer>
       <StyledButtonContainer>
-        <Button text="SEE ALL PROJECTS" />
+        <Button text="SEE ALL PROJECTS" colored />
       </StyledButtonContainer>
     </StyledProjects>
   );

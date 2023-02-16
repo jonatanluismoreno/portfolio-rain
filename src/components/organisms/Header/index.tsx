@@ -22,19 +22,6 @@ const StyledHeaderLeftSide = styled.div`
   }
 `;
 
-const StyledHeaderButton = styled.button`
-  margin-right: 86px;
-  background: none;
-  border: none;
-  padding: 0px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  color: #bdebea;
-`;
-
 const StyledHeaderRightSide = styled.div`
   margin-right: 215px;
   display: flex;
@@ -48,15 +35,15 @@ export default function Header() {
     <StyledHeader>
       <StyledHeaderLeftSide>
         <Link to="/">
-          <StyledHeaderButton>Home</StyledHeaderButton>
+          <Button text="Home" />
         </Link>
       </StyledHeaderLeftSide>
       <StyledHeaderRightSide>
         <Link to="/projects">
-          <StyledHeaderButton>Projects</StyledHeaderButton>
+          <Button text="Projects" />
         </Link>
         <Link to="/about">
-          <Button text="About" />
+          <Button text="About" colored />
         </Link>
       </StyledHeaderRightSide>
     </StyledHeader>

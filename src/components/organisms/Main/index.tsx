@@ -116,7 +116,7 @@ export default function Main() {
           I&apos;m a Frontend Developer with a passion for creating beautiful
           and usable user interfaces.
         </StyledMainDescription>
-        <Button text="Contact Me" />
+        <Button text="Contact Me" colored />
       </StyledMainLeftSide>
       <StyledMainDiv>
         <StyledMainImage src={programmer} alt="programmer" />
